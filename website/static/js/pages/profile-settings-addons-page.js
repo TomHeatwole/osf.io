@@ -16,6 +16,7 @@ ko.punches.enableAll();
 // Show capabilities modal on selecting an addon; unselect if user
 // rejects terms
 $('.addon-select').on('change', function() {
+    debugger;
     var that = this;
     var $that = $(that);
     if ($that.is(':checked')) {
@@ -32,9 +33,9 @@ $('.addon-select').on('change', function() {
                 buttons:{
                     confirm:{
                         label:'Confirm'
-                    }
+                    },
                 }
-        });
+            });
         }
     }
 });
@@ -45,7 +46,7 @@ var uncheckedOnLoad = $('#selectAddonsForm input:not(:checked)');
 
 // TODO: Refactor into a View Model
 $('#selectAddonsForm').on('submit', function() {
-
+    debugger;
     var formData = {};
     $('#selectAddonsForm').find('input').each(function(idx, elm) {
         var $elm = $(elm);
